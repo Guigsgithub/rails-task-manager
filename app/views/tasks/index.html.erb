@@ -1,7 +1,7 @@
 <h1>My tasks</h1>
 <ul>
   <% @tasks.each do |task| %>
-    <li><%= check_box("tag", tag.id, {checked:task.completed}) %> - <%= link_to(task.title, task_path(task)) %></li>
+    <li><%= check_box("tag", tag.id, {checked:task.completed}) %> - <%= link_to(task.title, task_path(task)) %> <%= link_to "🗑", task, method: :delete, data: {confirm: "Delete #{task.title}?"} %></li>
   <% end %>
 </ul>
 <p><%= link_to('Add a new Task', tasks_new_path) %></p>
