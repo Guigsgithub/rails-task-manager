@@ -4,3 +4,4 @@
   <%= @task.completed == true ? (check_box("tag", tag.id, {checked:@task.completed}) + " - The task is completed") : (check_box("tag", tag.id, {checked:@task.completed}) + " - The task is not completed") %>
 </p>
 <p><%= link_to("Back to the list", tasks_path) %></p>
+<p><%= link_to("Update the task", edit_task_path) %></p>
